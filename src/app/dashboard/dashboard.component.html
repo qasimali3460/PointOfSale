@@ -1,0 +1,43 @@
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-md-2">
+                    <nav id="sidebar">
+                        <div class="sidebar-header">
+                            <h3>Point of Sale</h3>
+                        </div>
+        
+                        <ul class="list-unstyled components">
+                            <p>Welcome Admin</p>
+                            <li class="active home" id="smenu" >
+                                <a routerLink="/dashboard/" >Home</a>
+                            </li>
+                            <li class="d prod" id="smenu">
+                                <a routerLink="/dashboard/products" >Products</a>
+                            </li>
+                            <li id="smenu" class="sup">
+                                <a  routerLink="/dashboard/suppliers" >Suppliers</a>
+                            </li>
+                            <li id="smenu" class="cat">
+                                <a  routerLink="/dashboard/category" >Category</a>
+                            </li>
+                            <li id="smenu" class="sal">
+                                <a  routerLink="/dashboard/sales" >Sales</a>
+                            </li>
+                        </ul>
+        
+                    </nav>
+                </div>
+                <div class="col-md-10" style="">
+                    <router-outlet></router-outlet> 
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="wrapper">
+            <div id="content" style="background-color:red;">
+                
+            </div>
+        </div> -->
+
+

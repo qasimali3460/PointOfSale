@@ -1,0 +1,137 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-info">
+  <a class="navbar-brand" href="#">Products</a>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a type="button" class="btn " data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus">AddNew </span> </a></li>
+      </ul>
+  </div>
+</nav>
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Add New Category</h4>
+            <button type="button" class="close" data-dismiss="modal"  #closeAddExpenseModal>&times;</button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="" #form="ngForm" >
+                <div class="container">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <h5>Product ID</h5>
+                      </div>
+                      <div class="col-md-3 col-sm-3">
+                        <input [(ngModel)]="product.id" id="newId" name="newId" type="text" class="form-control" minlength="4" required>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <h5>Product Name</h5>
+                      </div>
+                      <div class="col-md-3 col-sm-3">
+                        <input [(ngModel)]="product.Name" name="newName" type="text" minlength="4" class="form-control" required>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <h5>Category</h5>
+                      </div>
+                      <div class="col-md-3 col-sm-3">
+                          <select name="asd" id="" class =" form-control"  [(ngModel)]="product.categoryName" >
+                              <option value="Choose here" selected disabled hidden>Choose here</option>
+                              <option value="{{x.name}}" *ngFor="let x of category" >{{x.name}}</option>
+                          </select>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <h5>Supplier</h5>
+                      </div>
+                      <div class="col-md-3 col-sm-3">
+                          <select name="supplierName" id="" class =" form-control" [(ngModel)]="product.supplierName" >
+                              <option value="Choose here" selected disabled hidden>Choose here</option>
+                              <option value="{{x.name}}" *ngFor="let x of suppliers" >{{x.name}}</option>
+                          </select>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <h5>Stock</h5>
+                      </div>
+                      <div class="col-md-3 col-sm-3">
+                        <input [(ngModel)]="product.stock" name="stock" type="number" minlength="1" class="form-control" required>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <h5>Original Price</h5>
+                      </div>
+                      <div class="col-md-3 col-sm-3">
+                        <input [(ngModel)]="product.orginialPrice" name="oprice" type="number" minlength="1" class="form-control" required>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <h5>Selling Price</h5>
+                      </div>
+                      <div class="col-md-3 col-sm-3">
+                        <input [(ngModel)]="product.sellingPrice" name="sellingPrice" type="number" minlength="1" class="form-control" required>
+                      </div>
+                    </div>
+                </div>
+            </form>
+          </div>
+    
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="submit" class="btn  btn-success" (click)="addProduct()"  [disabled]="form.invalid">Add</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-bordred table-hover">
+      <thead class="">
+        <th>Product Id</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Supplier</th>
+        <th>Stock</th>
+        <th>original price</th>
+        <th>selling price</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of products; let i = index">
+          <!-- <td>{{i}}</td> -->
+          <td>{{x?.id}}</td>
+          <td>{{x?.Name}}</td>
+          <td>{{x?.categoryName }}</td>
+          <td>{{x?.supplierName}}</td>
+          <td>{{x?.stock}}</td>
+          <td>{{x?.orginialPrice | currency}}</td>
+          <td>{{x?.sellingPrice | currency}}</td>
+          <td><button type="button" class="btn btn-danger" (click)="dltProd(x?.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>  
+<!-- {{product | json}} -->
+</div>
+

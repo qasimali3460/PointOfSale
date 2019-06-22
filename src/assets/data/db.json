@@ -1,0 +1,78 @@
+{
+  "user": {},
+  "category": [
+    {
+      "id": 1002,
+      "name": "Olpers Limited"
+    },
+    {
+      "id": "1003",
+      "name": "Cold Drinks"
+    },
+    {
+      "id": "1004",
+      "name": "Tea Pack"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 430,
+      "name": "Olpers Limited",
+      "address": "Pakistan"
+    },
+    {
+      "id": 431,
+      "name": "Olpers Limited",
+      "address": "Pakistan"
+    }
+  ],
+  "products": [
+    {
+      "id": 223,
+      "Name": "Olpers Milk",
+      "photo": "Photo",
+      "orginialPrice": 1200,
+      "sellingPrice": 120,
+      "supplierId": 430,
+      "supplierName": "olpers Limited",
+      "categoryName": "Milks",
+      "categoryId": 1002,
+      "stock": 5
+    },
+    {
+      "id": 224,
+      "Name": "Olpers Butter",
+      "photo": "Photo",
+      "orginialPrice": 1200,
+      "sellingPrice": 120,
+      "supplierId": 430,
+      "supplierName": "olpers Limited",
+      "categoryName": "Butters",
+      "categoryId": 1003,
+      "stock": 4
+    }
+  ],
+  "items": [
+    {
+      "id": 430,
+      "name": "Olpers Limited",
+      "productId": 210,
+      "originalPrice": 100,
+      "sellingPrice": 120,
+      "categoryName": "Milks",
+      "categoryId": 1002
+    }
+  ],
+  "sales": [
+    {
+      "id": 430,
+      "cutomerType": "walk-in",
+      "productId": 210,
+      "productName": "Olpers Milk",
+      "quantity": 2,
+      "categoryId": 1002,
+      "categoryName": "Name",
+      "total": 240
+    }
+  ]
+}

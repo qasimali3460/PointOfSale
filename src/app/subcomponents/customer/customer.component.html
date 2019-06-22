@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-info">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">All Sales</a>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+        </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <th>Order Id</th>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>Grand Total</th>
+        </thead>
+        <tbody *ngFor="let x of sale;">
+            <tr *ngFor="let y of x">  
+              <td>{{y?.id}}</td>
+              <td>{{y?.name}}</td>
+              <td>{{y?.price}}</td>
+              <td>{{y?.qty}}</td>
+              <td>{{y?.total}}</td>
+              <td>{{y?.gdTotal}}</td>
+            </tr>
+      </table>
+    </div>
+  </div>  
+  
+  </div>

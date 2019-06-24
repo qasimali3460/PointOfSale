@@ -1,3 +1,8 @@
+![Screenshot (16)](https://user-images.githubusercontent.com/46552800/60041561-28e7ef80-96d5-11e9-9bbc-79b79cea6f9d.png)
+![Screenshot (17)](https://user-images.githubusercontent.com/46552800/60041562-29808600-96d5-11e9-897e-2f53201d0c1f.png)
+
+
+
 # PointOfSale
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
